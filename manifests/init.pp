@@ -28,7 +28,7 @@ class bind (
   if $chroot == true {
     $packagenamesuffix = '-chroot'
     # Different service name with chroot on RHEL7+)
-    if $facts['os']['family'] == 'RedHat'
+    if $facts['os']['family'] == 'RedHat' {
       $servicenamesuffix = '-chroot'
     } else {
       $servicenamesuffix = ''
